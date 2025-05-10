@@ -1,26 +1,35 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+
+@theme {
+  --font-title: "Caprasimo", "serif";
+  --font-subtitle: "Boogaloo", "sans-serif";
+  --font-paragraph: "Poppins", "sans-serif";
+
+  --color-blue-white-radio: #6edefa;
+  --color-bg-blue-dark-radio: #164863;
+  --color-blue-dark-title: #082e44;
+  --color-text-second-nav: #cff6fe;
+  --color-text-active-nav: #6edefa;
+  --color-bg-dark: #040c11;
+  --color-text-button: #cff6fe;
+  --color-bg-hover-link: rgba(207, 246, 254, 0.2);
+  --color-border-decorative: rgba(8, 46, 68, 0.5);
+  --color-border-strong: #082e44;
+  --color-border-soft: #cff6fe;
+  --color-blue-dark: #164863;
+  --color-blue-white: #21c3ef;
+  --color-blue-medium: #cff6fe;
+  --color-blue-light: #6edefa;
+  --color-blue-black: #082e44;
+  --color-blue-black-medium: #1473AA;
+  
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-paragraph);
 }
