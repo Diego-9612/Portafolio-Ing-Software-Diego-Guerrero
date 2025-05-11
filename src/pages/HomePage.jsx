@@ -2,16 +2,8 @@
 
 import React, { useState, useEffect, useCallback, memo } from "react";
 import { MainTitle, CTAButton, SocialLink } from "@/components/ComponentsMemo";
-import { TYPING_SPEED, ERASING_SPEED, PAUSE_DURATION } from "@/settings/settings";
-import { WORDS, TECH_STACK, SOCIAL_LINKS } from "@/data/data";
-import {
-    Github,
-    Linkedin,
-    Mail,
-    ExternalLink,
-    Instagram,
-    Sparkles,
-} from "lucide-react";
+import { SOCIAL_LINKS } from "@/data/data";
+import {Mail, ExternalLink,} from "lucide-react";
 
 
 
@@ -27,15 +19,14 @@ function HomePage() {
 
     return (
 
-        <main className="min-h-screen bg-radial from-blue-dark to-bg-dark overflow-hidden" id="Home">
+        <main className="min-h-screen  overflow-hidden" id="Home">
             <div className={`relative z-10 transition-all duration-1000 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
-                <section className="container mx-auto px-[5%] md:px-[5%] min-h-screen">
+                <section className="container mx-auto px-[5%] md:px-[10%] min-h-screen">
                     <div className="flex flex-col items-center justify-center h-screen gap-0">
                         {/* Left Column */}
                         <div className="w-full text-center md:text-left space-y-6 order-1">
                             <div className="space-y-5">
                                 <MainTitle />
-
                                 {/* Typing Effect */}
                                 <div className="h-8 text-center md:text-left w-full">
                                     <span className="text-xl md:text-2xl bg-blue-medium bg-clip-text text-transparent font-paragraph">
@@ -47,7 +38,7 @@ function HomePage() {
                                 </div>
 
                                 {/* Description */}
-                                <p className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-paragraph">
+                                <p className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-paragraph md:w-1/2">
                                     Creating innovative, functional, and user friendly websites for digital solutions.
                                 </p>
 

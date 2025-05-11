@@ -1,9 +1,10 @@
 'use client'
 
 import React, { useEffect, useMemo, useState } from "react"
-import { ArrowUpRight, Sparkles, FileText, Code, Award, Globe } from "lucide-react"
+import { Code, Award, Globe } from "lucide-react"
 import { AboutMe, ProfileImage, StatCard, Buttons } from "@/components/ComponentsMemo";
 import { LINKS_BUTTONS } from "@/data/data";
+
 
 
 
