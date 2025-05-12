@@ -51,19 +51,19 @@ function AnimatedBackground () {
             <div className="absolute inset-0">
                 <div
                     ref={(ref) => (blobRefs.current[0] = ref)}
-                    className={`${blobClass} top-0 -left-4 md:w-96 md:h-96 w-72 h-72 bg-red-500 opacity-100 md:opacity-20`}
+                    className={`${blobClass} top-0 -left-4 md:w-96 md:h-96 w-72 h-72 bg-white`}
                 />
                 <div
                     ref={(ref) => (blobRefs.current[1] = ref)}
-                    className={`${blobClass} top-0 -right-4 w-96 h-96 bg-red-500 opacity-100 md:opacity-20 sm:block`}
+                    className={`${blobClass} top-0 -right-4 w-96 h-96 bg-white `}
                 />
                 <div
                     ref={(ref) => (blobRefs.current[2] = ref)}
-                    className={`${blobClass} -bottom-8 left-[-40%] md:left-20 w-96 h-96 bg-red-500 opacity-20 md:opacity-20`}
+                    className={`${blobClass} -bottom-8 left-[-40%] md:left-20 w-96 h-96 bg-blue-white `}
                 />
                 <div
                     ref={(ref) => (blobRefs.current[3] = ref)}
-                    className={`${blobClass} -bottom-10 right-20 w-96 h-96 bg-red-500 opacity-100 md:opacity-100 hidden sm:block`}
+                    className={`${blobClass} -bottom-10 right-20 w-96 h-96 bg-white hidden sm:block`}
                 />
             </div>
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f10_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f10_1px,transparent_1px)] bg-[size:24px_24px]" />
