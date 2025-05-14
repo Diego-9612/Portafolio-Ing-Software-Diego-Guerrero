@@ -102,4 +102,4 @@ function AboutMePage() {
     );
 }
 
-export { AboutMePage };
+export default AboutMePage ;
