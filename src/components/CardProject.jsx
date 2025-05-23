@@ -30,7 +30,7 @@ function CardProject ({ Img, Title, Description, Link: ProjectLink, id }) {
                         <img
                             src={Img}
                             alt={Title}
-                            className="w-full h-40 object-cover transform group-hover:scale-105 transition-transform duration-500"
+                            className="w-full h-50 object-cover transform group-hover:scale-105 transition-transform duration-500"
                         />
                     </div>
 

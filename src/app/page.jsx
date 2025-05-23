@@ -1,5 +1,4 @@
 import { ThemeProvider } from "@/context/ThemeContext";
-import { DarkModeButton } from "@/components/DarkModeButton";
 import { AnimatedBackground } from "@/components/AnimatedBackground";
 import { Navbar } from "@/components/Navbar";
 import  HomePage  from "@/pages/HomePage";
@@ -16,7 +15,6 @@ export default function Home() {
         <AboutMePage/>
         <PortfolioPage/>
         <ContactPage/>
-        
       </ThemeProvider>
     </>
   );

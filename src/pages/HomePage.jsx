@@ -38,7 +38,7 @@ function HomePage() {
                                 </div>
 
                                 {/* Description */}
-                                <p className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-paragraph md:w-1/2">
+                                <p className="text-base md:text-lg text-blue-black dark:text-gray-400 max-w-xl leading-relaxed font-paragraph md:w-1/2">
                                     Creating innovative, functional, and user friendly websites for digital solutions.
                                 </p>
 

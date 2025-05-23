@@ -13,8 +13,8 @@ const SOCIAL_LINKS = [
 
 const LINKS_BUTTONS = [
 
-    { icon: FileText, text: 'Download CV', colorFrom: 'blue-dark', colorTo: 'bg-dark', link: "https:" },
-    { icon: Code, text: 'View Projects', colorFrom: 'blue-dark', colorTo: 'bg-dark', link: "https:/" },
+    {href: "https:", text: 'Download CV', icon: FileText},
+    {href: "https:/",text: 'View Projects',  icon: Code,},
 ]
 
 const TECH_STACK_PORTFOLIO = [
@@ -63,11 +63,26 @@ const PROJECTS = [
     },
     {
         id: 5,
-        Img: "html.svg",
-        Title: "E-commerce Demo",
-        Description: "Sitio de comercio electrónico con funcionalidades como carrito, filtros y pasarela de pago.",
-        Link: "https://example.com/ecommerce-demo",
+        Img: "P5.png",
+        Title: "Reproductor de música",
+        Description: "Interfaz de usuario intuitiva y responsive, Lista de reproducción dinámica.",
+        Link: "https://reproductor-musical-codeweb-studio.vercel.app/",
     },
+    {
+        id: 6,
+        Img: "P6.png",
+        Title: "Timer Challenge Game",
+        Description: "Está diseñado para practicar y comprender el uso de Refs y Portals en React",
+        Link: "https://gametemporizadorreact.vercel.app/",
+    },
+    {
+        id: 7,
+        Img: "P7.png",
+        Title: "Timer Challenge Game",
+        Description: "XXXXXXX",
+        Link: "https://gametemporizadorreact.vercel.app/",
+    },
+
 ];
 
 const CERTIFICATES = [

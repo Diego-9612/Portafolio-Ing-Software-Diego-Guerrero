@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { DarkModeButton } from "@/components/DarkModeButton";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -71,7 +72,7 @@ const Navbar = () => {
         <nav
         className={`fixed w-full top-0 z-50 transition-all duration-500 ${
             isOpen
-                ? "bg-bg-dark/30 opacity-100"
+                ? "bg-radial from-blue-light to-blue-dark dark:from-[#00032A] dark:to-bg-dark opacity-100"
                 : scrolled
                 ? "bg-bg-dark/30 backdrop-blur-xl"
                 : "bg-transparent"
@@ -118,11 +119,13 @@ const Navbar = () => {
                                 />
                             </a>
                         ))}
+                        <DarkModeButton/>
                     </div>
                 </div>
     
                 {/* Mobile Menu Button */}
-                <div className="md:hidden">
+                <div className="md:hidden flex gap-2">
+                    <DarkModeButton />
                     <button
                         onClick={() => setIsOpen(!isOpen)}
                         className={`relative p-2 text-blue-dark-title hover:text-blue-white transition-transform duration-300 ease-in-out transform ${
@@ -141,7 +144,7 @@ const Navbar = () => {
     
         {/* Mobile Menu Overlay */}
         <div
-            className={`md:hidden h-2/4 fixed inset-0 bg-radial from-[#00032A] to-bg-dark transition-all duration-300 ease-in-out ${
+            className={`md:hidden h-2/4 fixed inset-0 bg-radial from-blue-light to-blue-dark dark:from-[#00032A] dark:to-bg-dark transition-all duration-300 ease-in-out ${
                 isOpen
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-[-100%] pointer-events-none"
@@ -168,7 +171,9 @@ const Navbar = () => {
                         >
                             {item.label}
                         </a>
+                        
                     ))}
+                    
                 </div>
             </div>
         </div>

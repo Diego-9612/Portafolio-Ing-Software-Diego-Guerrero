@@ -66,10 +66,10 @@ function PortfolioPage() {
     return (
         <div className="md:px-[10%] px-[5%] w-full mt-[3rem] overflow-hidden" id="Portofolio">
             <div className="flex flex-col gap-6 text-center pb-10">
-                <h2 className="inline-block text-3xl md:text-5xl font-title text-center mx-auto text-transparent bg-clip-text bg-blue-light">
+                <h2 className="inline-block text-3xl md:text-5xl font-title text-center mx-auto text-transparent bg-clip-text bg-blue-black dark:bg-blue-light">
                         Portfolio
                 </h2>
-                <p className="text-slate-400 max-w-2xl text-gray-400 mx-auto text-sm md:text-base mt-2">
+                <p className="text-blue-black dark:text-slate-400 max-w-2xl  mx-auto text-sm md:text-base mt-2">
                     Explore my journey through projects, certifications, and technical expertise.
                     Each section represents a milestone in my continuous learning path.
                 </p>
@@ -80,7 +80,7 @@ function PortfolioPage() {
                     position="static"
                     elevation={0}
                     sx={{
-                        bgcolor: "transparent",
+                        background: "radial-gradient(circle at center, rgba(8, 46, 68, 0.7), rgba(22, 72, 99, 0.7))",
                         border: "1px solid rgba(255, 255, 255, 0.1)",
                         borderRadius: "20px",
                         position: "relative",
@@ -92,7 +92,6 @@ function PortfolioPage() {
                             left: 0,
                             right: 0,
                             bottom: 0,
-                            background: "linear-gradient(180deg, rgba(102, 92, 246, 0.03) 0%, rgba(29, 46, 158, 0.3) 100%)",
                             backdropFilter: "blur(10px)",
                             zIndex: 0,
                         },
@@ -108,9 +107,9 @@ function PortfolioPage() {
                         sx={{
                             minHeight: "70px",
                             "& .MuiTab-root": {
-                                fontSize: { xs: "0.9rem", md: "1rem" },
-                                fontWeight: "600",
-                                color: "#91abc9",
+                                fontSize: { xs: "0.9rem", md: "0.9rem" },
+                                fontWeight: "500",
+                                color: "#cff6fe",
                                 textTransform: "none",
                                 transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
                                 padding: "20px 0",
@@ -119,7 +118,7 @@ function PortfolioPage() {
                                 borderRadius: "12px",
                                 "&:hover": {
                                     color: "#6edefa",
-                                    backgroundColor: "rgba(139, 92, 246, 0.1)",
+                                    backgroundColor: "rgba(22, 72, 99)",
                                     transform: "translateY(-2px)",
                                     "& .lucide": {
                                         transform: "scale(1.1) rotate(5deg)",
@@ -127,7 +126,7 @@ function PortfolioPage() {
                                 },
                                 "&.Mui-selected": {
                                     color: "#6edefa",
-                                    background: "linear-gradient(135deg, rgba(92, 105, 246, 0.2), rgba(59, 115, 246, 0.28))",
+                                    background: "linear-gradient(rgba(110, 222, 250, 0.3), rgba(8, 46, 68, 0.3))",
                                     boxShadow: "0 4px 15px -3px rgba(92, 105, 246, 0.2)",
                                     "& .lucide": {
                                         color: "#6edefa",
