@@ -25,14 +25,14 @@ function AboutMePage() {
     const statsData = useMemo(() => [
         {
             icon: Code,
-            value: 1,
+            value: 6,
             label: "Total Projects",
             description: "Innovative web solutions crafted",
             animation: "fade-right",
         },
         {
             icon: Award,
-            value: 1,
+            value: 9,
             label: "Certificates",
             description: "Professional skills validated",
             animation: "fade-up",

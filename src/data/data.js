@@ -5,16 +5,16 @@ const WORDS = ["Network & Telecom Student", "Tech Enthusiast"];
 const TECH_STACK = ["React", "Javascript", "Node.js", "Tailwind"];
 
 const SOCIAL_LINKS = [
-    { icon: Github, link: "https:" },
-    { icon: Linkedin, link: "https:/" },
-    { icon: Instagram, link: "https:/" },
-    { icon: Youtube, link: "https:/" }
+    { icon: Github, link: "https://github.com/Diego-9612" },
+    { icon: Linkedin, link: "https://www.linkedin.com/in/diego-guerrero-software/" },
+    { icon: Instagram, link: "https://www.instagram.com/codeweb_studio/" },
+    { icon: Youtube, link: "https://www.youtube.com/@CodewebStudio" }
 ];
 
 const LINKS_BUTTONS = [
 
     {href: "https:", text: 'Download CV', icon: FileText},
-    {href: "https:/",text: 'View Projects',  icon: Code,},
+    {href: "#Portofolio",text: 'View Projects',  icon: Code,},
 ]
 
 const TECH_STACK_PORTFOLIO = [
@@ -35,9 +35,9 @@ const TECH_STACK_PORTFOLIO = [
 const PROJECTS = [
     {
         id: 1,
-        Img: "Photo.png",
-        Title: "Landing Page de Agencia",
-        Description: "Sitio web responsive para una agencia digital, construido con React y Tailwind CSS.",
+        Img: "Traxxo.jpg",
+        Title: "App Movil Trasporte de Carga",
+        Description: "Este proyecto fue desarrollado como trabajo de grado en Ingeniería de Software",
         Link: "https://example.com/proyecto-agencia",
     },
     {
@@ -88,23 +88,39 @@ const PROJECTS = [
 const CERTIFICATES = [
     {
         id: 1,
-        Img: "html.svg",
+        Img: "C1.png",
     },
     {
-        id: 1,
-        Img: "html.svg",
+        id: 2,
+        Img: "c2.png",
     }, 
     {
-        id: 1,
-        Img: "html.svg",
+        id: 3,
+        Img: "c3.png",
     },
     {
-        id: 1,
-        Img: "html.svg",
+        id: 4,
+        Img: "c4.png",
     },
     {
-        id: 1,
-        Img: "html.svg",
+        id: 5,
+        Img: "c5.png",
+    },
+    {
+        id: 6,
+        Img: "c6.png",
+    },
+    {
+        id: 7,
+        Img: "c7.png",
+    },
+    {
+        id: 8,
+        Img: "c8.png",
+    },
+    {
+        id: 9,
+        Img: "c9.png",
     }
 ]
 

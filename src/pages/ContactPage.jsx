@@ -82,14 +82,6 @@ function ContactPage () {
           className="inline-block text-3xl md:text-5xl font-title text-center mx-auto text-transparent bg-clip-text bg-blue-white"
         >
           <span
-            style={{
-              color: "#21c3ef",
-              backgroundImage:
-                "linear-gradient(45deg, #6366f1 10%, #a855f7 93%)",
-              WebkitBackgroundClip: "text",
-              backgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
           >
             Contact Me
           </span>
@@ -105,7 +97,7 @@ function ContactPage () {
         className="h-auto py-10 flex items-center justify-center px-[5%] md:px-0"
         id="Contact"
       >
-        <div className="container px-[1%] grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-[45%_55%] 2xl:grid-cols-[35%_65%] gap-12">
+        <div className="container px-[1%] grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 w-4/5 gap-12">
           <div
             className="bg-white/5 backdrop-blur-xl rounded-3xl shadow-2xl p-5 py-10 sm:p-10 transform transition-all duration-300 hover:shadow-[#6366f1]/10"
           >
