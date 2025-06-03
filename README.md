@@ -13,7 +13,7 @@ Este es mi portafolio personal como Ingeniero de Software. Aquí muestro algunos
 
 * **React**: Librería principal para la construcción de la interfaz.
 * **Tailwind CSS**: Utilizado para estilizar el sitio de forma rápida y coherente.
-* **Vite**: Herramienta para desarrollo moderno con carga rápida y optimización de bundles.
+* **Next.js**: Herramienta para desarrollo moderno con carga rápida y optimización de bundles.
 * **React Icons**: Para integrar íconos de forma sencilla y estilizada.
 
 ## 🛠️ Arquitectura y Características Técnicas
@@ -25,8 +25,6 @@ Este es mi portafolio personal como Ingeniero de Software. Aquí muestro algunos
 * **100% responsive** y adaptado a dispositivos móviles.
 
 ## 🖼️ Vista Previa
-
-Agrega una imagen del portafolio aquí (coloca el archivo dentro de `/public` y usa la siguiente sintaxis):
 
 ![port](https://github.com/user-attachments/assets/51fccd27-d238-4b32-962a-82ac7275b378)
 
@@ -63,7 +61,7 @@ Este proyecto es personal, pero si tienes sugerencias o encuentras algún bug, �
 ## 📬 Contacto
 
 * Correo: [diego.guerrero.dev@gmail.com](mailto:diegoguerrero@umariana.com)
-* LinkedIn: [Diego Guerrero](https://www.linkedin.com/in/diego-guerrero-dev)
+* LinkedIn: [Diego Guerrero](https://www.linkedin.com/in/diego-guerrero-software/)
 * GitHub: [@Diego-9612](https://github.com/Diego-9612)
 
 ---
