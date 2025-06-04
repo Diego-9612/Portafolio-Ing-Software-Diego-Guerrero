@@ -19,13 +19,13 @@ const Comment = memo(({ comment, formatDate, }) => (
                     loading="lazy"
                 />
             ) : (
-                <div className="p-2 rounded-full bg-indigo-500/20 text-indigo-400 group-hover:bg-indigo-500/30 transition-colors">
+                <div className="p-2 rounded-full bg-indigo-500/20 text-blue-white group-hover:bg-indigo-500/30 transition-colors">
                     <UserCircle2 className="w-5 h-5" />
                 </div>
             )}
             <div className="flex-grow min-w-0">
                 <div className="flex items-center justify-between gap-4 mb-2">
-                    <h4 className="font-medium text-white truncate">{comment.userName}</h4>
+                    <h4 className="font-medium text-blue-white truncate">{comment.userName}</h4>
                     <span className="text-xs text-gray-400 whitespace-nowrap">
                         {formatDate(comment.createdAt)}
                     </span>
@@ -37,7 +37,6 @@ const Comment = memo(({ comment, formatDate, }) => (
 ));
 
 const CommentForm = memo(() => {
-    const [newComment, setNewComment] = useState('');
     const [imagePreview, setImagePreview] = useState(null);
     const [imageFile, setImageFile] = useState(null);
     const textareaRef = useRef(null);
@@ -49,31 +48,31 @@ const CommentForm = memo(() => {
     return (
         <form  className="space-y-6">
             <div className="space-y-2">
-                <label className="block text-sm font-medium text-white">
+                <label className="block text-sm font-paragraph  text-blue-black dark:text-blue-medium">
                     Name <span className="text-red-400">*</span>
                 </label>
                 <input
                     type="text"
                     placeholder="Enter your name"
-                    className="w-full p-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition-all"
+                    className="w-full p-3 rounded-xl bg-white/5 border border-white/10 text-gray-400 placeholder-blue-black text-sm dark:placeholder-gray-500 dark:text-blue-medium focus:outline-none focus:border-blue-white focus:ring-1 focus:to-blue-white/20 transition-all"
                     required
                 />
             </div>
 
             <div className="space-y-2">
-                <label className="block text-sm font-medium text-white">
+                <label className="block text-sm font-paragraph text-blue-black dark:text-blue-medium">
                     Message <span className="text-red-400">*</span>
                 </label>
                 <textarea
                     ref={textareaRef}
                     placeholder="Write your message here..."
-                    className="w-full p-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition-all resize-none min-h-[120px]"
+                    className="w-full p-4 rounded-xl bg-white/5 border border-white/10  dark:text-blue-medium placeholder-blue-black text-sm dark:placeholder-gray-500 text-gray-400 focus:outline-none focus:border-blue-white focus:ring-1 focus:to-blue-white/20 transition-all resize-none min-h-[120px]"
                     required
                 />
             </div>
 
             <div className="space-y-2">
-                <label className="block text-sm font-medium text-white">
+                <label className="block text-sm font-paragraph text-blue-black dark:text-blue-medium">
                     Profile Photo <span className="text-gray-400">(optional)</span>
                 </label>
                 <div className="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-xl">
@@ -82,7 +81,7 @@ const CommentForm = memo(() => {
                             <img
                                 src={imagePreview}
                                 alt="Profile preview"
-                                className="w-16 h-16 rounded-full object-cover border-2 border-indigo-500/50"
+                                className="w-16 h-16 rounded-full object-cover border-2 border-blue-white/50"
                             />
                             <button
                                 type="button"
@@ -106,7 +105,7 @@ const CommentForm = memo(() => {
                             />
                             <button
                                 type="button"
-                                className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-indigo-500/20 text-indigo-400 hover:bg-indigo-500/30 transition-all border border-dashed border-indigo-500/50 hover:border-indigo-500 group"
+                                className="w-full flex items-center text-sm justify-center gap-2 px-4 py-3 rounded-xl bg-blue-white/20 text-blue-black dark:text-blue-medium hover:bg-blue-white/30 transition-all border border-dashed border-blue-white/50 hover:border-blue-white group"
                             >
                                 <ImagePlus className="w-5 h-5 group-hover:scale-110 transition-transform" />
                                 <span>Choose Profile Photo</span>
@@ -121,8 +120,8 @@ const CommentForm = memo(() => {
 
             <button
                 type="submit"
-                className="relative w-full h-12 bg-gradient-to-r from-[#6366f1] to-[#a855f7] rounded-xl font-medium text-white overflow-hidden group transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] disabled:opacity-50 disabled:hover:scale-100 disabled:cursor-not-allowed"
-            >
+                className="relative w-full h-12 text-sm bg-gradient-to-r from-blue-black to-blue-black-medium dark:to-blue-white-radio rounded-xl font-medium text-white overflow-hidden group transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] disabled:opacity-50 disabled:hover:scale-100 disabled:cursor-not-allowed"
+            > Comment
                 <div className="absolute inset-0 bg-white/20 translate-y-12 group-hover:translate-y-0 transition-transform duration-300" />
                 <div className="relative flex items-center justify-center gap-2">
                     
@@ -138,14 +137,14 @@ const Commentar = () => {
     const [error, setError] = useState('');
 
     return (
-        <div className="w-full bg-gradient-to-b from-white/10 to-white/5 rounded-2xl overflow-hidden backdrop-blur-xl shadow-xl">
+        <div className="w-full bg-gradient-to-b from-blue-white/10 to-white/5 rounded-2xl overflow-hidden backdrop-blur-xl shadow-xl">
         <div className="p-6 border-b border-white/10">
             <div className="flex items-center gap-3">
-                <div className="p-2 rounded-xl bg-indigo-500/20">
-                    <MessageCircle className="w-6 h-6 text-indigo-400" />
+                <div className="p-2 rounded-xl bg-blue-white/20">
+                    <MessageCircle className="w-6 h-6 text-blue-white-radio" />
                 </div>
-                <h3 className="text-xl font-semibold text-white">
-                    Comments <span className="text-indigo-400">({comments.length})</span>
+                <h3 className="text-xl font-semibold text-blue-black dark:text-blue-white">
+                    Comments <span className="text-blue-white">({comments.length})</span>
                 </h3>
             </div>
         </div>
@@ -163,8 +162,8 @@ const Commentar = () => {
             <div className="space-y-4 h-[300px] overflow-y-auto custom-scrollbar" data-aos="fade-up" data-aos-delay="200">
                 {comments.length === 0 ? (
                     <div className="text-center py-8">
-                        <UserCircle2 className="w-12 h-12 text-indigo-400 mx-auto mb-3 opacity-50" />
-                        <p className="text-gray-400">No comments yet. Start the conversation!</p>
+                        <UserCircle2 className="w-12 h-12 text-blue-white mx-auto mb-3 opacity-50" />
+                        <p className="text-gray-400 text-sm">No comments yet. Start the conversation!</p>
                     </div>
                 ) : (
                     comments.map((comment, index) => (

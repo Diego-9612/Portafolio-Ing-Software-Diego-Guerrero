@@ -43,6 +43,11 @@ function PortfolioPage() {
     const [value, setValue] = useState(0);
     const [isMobile, setIsMobile] = useState(false);
     const [isClient, setIsClient] = useState(false);
+    const [showMoreProjects, setShowMoreProjects] = useState(false);
+    const [showMoreCertificates, setShowMoreCertificates] = useState(false);
+
+    const toggleProjects = () => setShowMoreProjects(!showMoreProjects);
+    const toggleCertificates = () => setShowMoreCertificates(!showMoreCertificates);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -66,8 +71,8 @@ function PortfolioPage() {
     return (
         <div className="md:px-[10%] px-[5%] w-full mt-[3rem] overflow-hidden" id="Portofolio">
             <div className="flex flex-col gap-6 text-center pb-10">
-                <h2 className="inline-block text-3xl md:text-5xl font-title text-center mx-auto text-transparent bg-clip-text bg-blue-black dark:bg-blue-light">
-                        Portfolio
+                <h2 className="inline-block text-3xl md:text-4xl font-title text-center mx-auto text-transparent bg-clip-text bg-blue-black dark:bg-blue-light">
+                    Portfolio
                 </h2>
                 <p className="text-blue-black dark:text-slate-400 max-w-2xl  mx-auto text-sm md:text-base mt-2">
                     Explore my journey through projects, certifications, and technical expertise.
@@ -157,20 +162,23 @@ function PortfolioPage() {
                             <TabPanel value={value} index={0} dir={theme.direction}>
                                 <div className="container mx-auto flex justify-center items-center overflow-hidden">
                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                                        {PROJECTS.map((project, index) => (
-                                            <div
-                                                key={project.id || index}
-
-                                            >
+                                        {PROJECTS.slice(0, showMoreProjects ? PROJECTS.length : initialItems).map((project, index) => (
+                                            <div key={project.id || index}>
                                                 <CardProject
                                                     Img={project.Img}
                                                     Title={project.Title}
                                                     Description={project.Description}
                                                     Link={project.Link}
-                                                    id={project.id}
+                                                    LinkGitHub={project.LinkGitHub}
                                                 />
                                             </div>
                                         ))}
+                                        <div className="mt-4 flex justify-center">
+                                            <ToggleButton
+                                                onClick={toggleProjects}
+                                                isShowingMore={showMoreProjects}
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                             </TabPanel>
@@ -179,11 +187,17 @@ function PortfolioPage() {
                             <TabPanel value={value} index={1} dir={theme.direction}>
                                 <div className="container mx-auto flex justify-center items-center overflow-hidden">
                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                        {CERTIFICATES.map((certificate, index) => (
+                                        {CERTIFICATES.slice(0, showMoreCertificates ? CERTIFICATES.length : initialItems).map((certificate, index) => (
                                             <div key={index}>
                                                 <Certificate ImgCertif={certificate.Img} />
                                             </div>
                                         ))}
+                                        <div className="mt-4 flex  justify-between">
+                                            <ToggleButton
+                                                onClick={toggleCertificates}
+                                                isShowingMore={showMoreCertificates}
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                             </TabPanel>
@@ -212,7 +226,7 @@ function PortfolioPage() {
     );
 }
 
-export default  PortfolioPage;
+export default PortfolioPage;
 
 
 

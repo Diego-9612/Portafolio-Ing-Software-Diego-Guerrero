@@ -4,15 +4,15 @@ import { memo } from "react";
 import { ArrowUpRight, Sparkles } from "lucide-react"
 
 const MainTitle = memo(() => (
-    <div className="w-full space-y-2">
-        <h1 className="text-5xl md:text-7xl font-title tracking-tight uppercase">
+    <div className="w-full mt-12 space-y-2">
+        <h1 className="text-5xl md:text-6xl font-title tracking-tight uppercase">
             <span className="relative inline-block">
                 <span className="absolute -inset-2 bg-radial from-blue-white to-border-soft blur-2xl opacity-15"></span>
                 <span className="relative bg-blue-white dark:bg-text-second-nav bg-clip-text text-transparent transition-colors duration-700 tracking-wide">
                     software
                 </span>
             </span>
-            
+            <br />
             <span className="relative inline-block mt-2">
                 <span className="absolute -inset-2  bg-radial from-blue-white  to-border-soft blur-2xl opacity-15"></span>
                 <span className="relative bg-blue-black dark:bg-blue-white bg-clip-text text-transparent transition-colors duration-700 tracking-wide">
@@ -27,7 +27,7 @@ const CTAButton = memo(({ href, text, icon: Icon }) => (
     <a href={href}>
         <button className="group relative w-[160px]">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-white to-blue-medium rounded-xl opacity-20 blur-md group-hover:opacity-90 transition-all duration-700"></div>
-            <div className="relative h-11 md:h-14 bg-blue-black dark:bg-bg-dark backdrop-blur-xl rounded-lg border border-blue-medium/10 leading-none overflow-hidden">
+            <div className="relative h-11 md:h-12 bg-blue-black dark:bg-bg-dark backdrop-blur-xl rounded-lg border border-blue-medium/10 leading-none overflow-hidden">
                 <div className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 bg-gradient-to-r from-blue-white-radio/10 to-blue-medium/10"></div>
                 <span className="cursor-pointer absolute inset-0 flex items-center justify-center gap-3 text-base group-hover:gap-3 transition-all duration-300">
                     <span className="bg-blue-medium bg-clip-text text-transparent font-subtitle z-10">
@@ -45,7 +45,7 @@ const SocialLink = memo(({ icon: Icon, link }) => (
         <button className="group relative p-3">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-white to-blue-medium rounded-xl blur opacity-10 group-hover:opacity-30 transition duration-300"></div>
             <div className="cursor-pointer relative rounded-xl bg-border-soft/20 dark:bg-bg-dark/60 backdrop-blur-xl p-2 border border-blue-black/20 dark:border-blue-medium/20 group-hover:border-white/20 transition-all duration-300">
-                <Icon className="h-6 w-8 md:w-8 md:h-8 text-blue-black dark:text-blue-medium/60 group-hover:text-white transition-colors" />
+                <Icon className="h-5 w-6 md:h-6 text-blue-black dark:text-blue-medium/60 group-hover:text-white transition-colors" />
             </div>
         </button>
     </a>
@@ -55,11 +55,11 @@ const SocialLink = memo(({ icon: Icon, link }) => (
 const AboutMe = memo(() => (
     <main className="text-center  mb-2 px-[5%]">
         <section className="inline-block relative group">
-            <h2 className="text-4xl md:text-5xl font-title text-transparent bg-clip-text bg-blue-black dark:bg-blue-white">
+            <h2 className="text-3xl md:text-4xl font-title text-transparent bg-clip-text bg-blue-black dark:bg-blue-white">
                 About Me
             </h2>
         </section>
-        <p className="mt-2 text-blue-medium dark:text-gray-400 max-w-2xl mx-auto text-base  flex items-center justify-center gap-6">
+        <p className="mt-2 text-blue-medium dark:text-gray-400 max-w-2xl mx-auto text-sm flex items-center justify-center gap-6">
             <Sparkles className="w-4 h-4 text-blue-white" />
             Transforming ideas into digital experiences
             <Sparkles className="w-4 h-4 text-blue-white" />

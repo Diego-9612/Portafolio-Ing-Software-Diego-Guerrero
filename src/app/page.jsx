@@ -5,6 +5,7 @@ import  HomePage  from "@/pages/HomePage";
 import AboutMePage  from "@/pages/AboutMePage";
 import PortfolioPage  from "@/pages/PortfolioPage";
 import ContactPage from "@/pages/ContactPage";
+import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
@@ -15,6 +16,7 @@ export default function Home() {
         <AboutMePage/>
         <PortfolioPage/>
         <ContactPage/>
+        <Footer/>
       </ThemeProvider>
     </>
   );

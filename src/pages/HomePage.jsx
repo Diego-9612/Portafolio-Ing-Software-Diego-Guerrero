@@ -23,10 +23,10 @@ function HomePage() {
         <main className="w-full min-h-screen flex justify-center items-center  overflow-hidden" id="Home">
             <div className={`relative z-10 transition-all duration-1000 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
                 <section className="container mx-auto px-[5%] md:px-[10%] min-h-screen">
-                    <div className="flex flex-col items-center justify-center h-screen gap-0">
+                    <div className="flex flex-col items-center justify-center h-screen">
                         {/* Left Column */}
                         <div className="w-full text-center flex justify-center items-center space-y-6 order-1">
-                            <div className="space-y-5 justify-center items-center flex flex-col">
+                            <div className="space-y-6 justify-center items-center flex flex-col">
                                 <MainTitle />
                                 {/* Typing Effect */}
                                 <div className="h-8 text-center w-full">
@@ -49,12 +49,12 @@ function HomePage() {
                                 </div>
 
                                 {/* Description */}
-                                <p className="text-base md:text-xl text-blue-black dark:text-gray-400 max-w-xl leading-relaxed font-paragraph">
-                                    Creating innovative, functional, and user friendly websites for digital solutions.
+                                <p className="text-base md:text-lg text-blue-black dark:text-gray-400 max-w-300 leading-relaxed font-paragraph">
+                                    Design and development of modern, scalable web applications focused on user experience, applying principles of optimal performance, robust architecture, and best practices in software engineering.
                                 </p>
 
                                 {/* CTA Buttons */}
-                                <div className="flex flex-row gap-3 w-full justify-center">
+                                <div className="flex flex-row gap-2 w-full justify-center">
                                     <CTAButton href="#Portofolio" text="Projects" icon={ExternalLink} />
                                     <CTAButton href="#Contact" text="Contact" icon={Mail} />
                                 </div>

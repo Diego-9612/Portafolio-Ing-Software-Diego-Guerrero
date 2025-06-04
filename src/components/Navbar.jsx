@@ -82,13 +82,7 @@ const Navbar = () => {
             <div className="flex items-center justify-between h-16">
                 {/* Logo */}
                 <div className="flex-shrink-0">
-                    <a
-                        href="#Home"
-                        onClick={(e) => scrollToSection(e, "#Home")}
-                        className="text-xl font-title bg-blue-white bg-clip-text text-transparent"
-                    >
-                        Codeweb Studio
-                    </a>
+                    <img src="/codelogo.png" alt="logo" className="w-full h-10 object-contain transform group-hover:scale-105 transition-transform duration-500"/>
                 </div>
     
                 {/* Desktop Navigation */}
