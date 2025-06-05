@@ -13,7 +13,7 @@ const SOCIAL_LINKS = [
 
 const LINKS_BUTTONS = [
 
-    {href: "https:", text: 'Download CV', icon: FileText},
+    {href: "https://drive.google.com/drive/u/0/folders/1HMM4jhvt8OFYnwSaLTp3KVNaxM50qyHE", text: 'Download CV', icon: FileText},
     {href: "#Portofolio",text: 'View Projects',  icon: Code,},
 ]
 
