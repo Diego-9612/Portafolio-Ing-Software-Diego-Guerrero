@@ -23,22 +23,43 @@ const MainTitle = memo(() => (
     </div>
 ));
 
-const CTAButton = memo(({ href, text, icon: Icon }) => (
-    <a href={href}>
-        <button className="group relative w-[160px]">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-white to-blue-medium rounded-xl opacity-20 blur-md group-hover:opacity-90 transition-all duration-700"></div>
-            <div className="relative h-11 md:h-12 bg-blue-black dark:bg-bg-dark backdrop-blur-xl rounded-lg border border-blue-medium/10 leading-none overflow-hidden">
-                <div className="absolute inset-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 bg-gradient-to-r from-blue-white-radio/10 to-blue-medium/10"></div>
-                <span className="cursor-pointer absolute inset-0 flex items-center justify-center gap-3 text-base group-hover:gap-3 transition-all duration-300">
-                    <span className="bg-blue-medium bg-clip-text text-transparent font-subtitle z-10">
+const CTAButton = memo(({ href, text, icon: Icon, onClick, type = "button", disabled, className, color = "blue" }) => {
+    const isRed = color === "red";
+    const bgGradient = isRed ? "from-red-500 to-red-700" : "from-blue-white to-blue-medium";
+    const bgHoverGradient = isRed ? "from-red-500/10 to-red-700/10" : "from-blue-white-radio/10 to-blue-medium/10";
+    const textStyle = isRed ? "text-red-500" : "bg-blue-medium bg-clip-text text-transparent";
+    const iconColor = isRed ? "text-red-500" : "text-blue-medium";
+    const borderColor = isRed ? "border-red-500/10" : "border-blue-medium/10";
+
+    const content = (
+        <button 
+            type={type} 
+            onClick={onClick} 
+            disabled={disabled} 
+            className={`group relative ${className || 'w-[160px]'} ${disabled ? "opacity-50 cursor-not-allowed" : ""}`}
+        >
+            <div className={`absolute -inset-0.5 bg-gradient-to-r ${bgGradient} rounded-xl opacity-20 blur-md ${disabled ? "" : "group-hover:opacity-90"} transition-all duration-700`}></div>
+            <div className={`relative h-11 md:h-12 bg-blue-black dark:bg-bg-dark backdrop-blur-xl rounded-lg border ${borderColor} leading-none overflow-hidden`}>
+                <div className={`absolute inset-0 scale-x-0 ${disabled ? "" : "group-hover:scale-x-100"} origin-left transition-transform duration-500 bg-gradient-to-r ${bgHoverGradient}`}></div>
+                <span className="absolute inset-0 flex items-center justify-center gap-2 md:gap-3 text-sm md:text-base group-hover:gap-3 transition-all duration-300 px-2 cursor-pointer">
+                    <span className={`${textStyle} font-subtitle z-10 text-center whitespace-nowrap`}>
                         {text}
                     </span>
-                    <Icon className={`w-5 h-5 text-blue-medium ${text === 'Contact' ? 'group-hover:translate-x-1' : 'group-hover:rotate-45'} transform transition-all duration-300 z-10`} />
+                    {Icon && <Icon className={`w-4 h-4 md:w-5 md:h-5 flex-shrink-0 ${iconColor} ${text === 'Contact' ? 'group-hover:translate-x-1' : 'group-hover:rotate-45'} transform transition-all duration-300 z-10`} />}
                 </span>
             </div>
         </button>
-    </a>
-));
+    );
+
+    if (href) {
+        return (
+            <a href={href} className="flex-shrink-0" target={href.startsWith('http') ? "_blank" : undefined} rel={href.startsWith('http') ? "noopener noreferrer" : undefined}>
+                {content}
+            </a>
+        );
+    }
+    return content;
+});
 
 const SocialLink = memo(({ icon: Icon, link }) => (
     <a href={link} target="_blank" rel="noopener noreferrer">
