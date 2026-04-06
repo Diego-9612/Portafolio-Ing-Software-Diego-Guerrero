@@ -63,7 +63,7 @@ function AboutMePage() {
                         </h2>
 
                         <p className="text-sm md:text-base text-blue-black dark:text-gray-400 leading-relaxed pb-4 md:pb-0">
-                            Software Engineer currently working in QA and Automation. I have a strong background in software development and specialize in creating efficient automated testing solutions to ensure high-quality software delivery and seamless digital experiences.
+                            Environmental Engineer with advanced training in Software Engineering (final semester) and strong knowledge in fullstack web application development, focused on creating engaging and functional digital experiences tailored to the specific needs of each project.
                         </p>
 
                         <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-4 md:px-0 w-full">

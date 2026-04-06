@@ -3,7 +3,6 @@
 import React from 'react';
 import { useState, useRef, memo } from 'react';
 import { MessageCircle, UserCircle2, Loader2, AlertCircle, Send, ImagePlus, X } from 'lucide-react';
-import { CTAButton } from './ComponentsMemo';
 
 
 const Comment = memo(({ comment, formatDate, }) => (
@@ -84,18 +83,18 @@ const CommentForm = memo(() => {
                                 alt="Profile preview"
                                 className="w-16 h-16 rounded-full object-cover border-2 border-blue-white/50"
                             />
-                            <CTAButton
+                            <button
                                 type="button"
-                                color="red"
                                 onClick={() => {
                                     setImagePreview(null);
                                     setImageFile(null);
                                     if (fileInputRef.current) fileInputRef.current.value = '';
                                 }}
-                                text="Remove Photo"
-                                icon={X}
-                                className="w-auto"
-                            />
+                                className="flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/20 text-red-400 hover:bg-red-500/30 transition-all group"
+                            >
+                                <X className="w-4 h-4" />
+                                <span>Remove Photo</span>
+                            </button>
                         </div>
                     ) : (
                         <div className="w-full" >
@@ -104,13 +103,13 @@ const CommentForm = memo(() => {
                                 ref={fileInputRef}
                                 className="hidden"
                             />
-                            <CTAButton
+                            <button
                                 type="button"
-                                text="Choose Profile Photo"
-                                icon={ImagePlus}
-                                className="w-full"
-                                onClick={() => fileInputRef.current && fileInputRef.current.click()}
-                            />
+                                className="w-full flex items-center text-sm justify-center gap-2 px-4 py-3 rounded-xl bg-blue-white/20 text-blue-black dark:text-blue-medium hover:bg-blue-white/30 transition-all border border-dashed border-blue-white/50 hover:border-blue-white group"
+                            >
+                                <ImagePlus className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                                <span>Choose Profile Photo</span>
+                            </button>
                             <p className="text-center text-gray-400 text-sm mt-2">
                                 Max file size: 5MB
                             </p>
@@ -119,12 +118,15 @@ const CommentForm = memo(() => {
                 </div>
             </div>
 
-            <CTAButton
+            <button
                 type="submit"
-                text="Comment"
-                icon={Send}
-                className="w-full mt-4"
-            />
+                className="relative w-full h-12 text-sm bg-gradient-to-r from-blue-black to-blue-black-medium dark:to-blue-white-radio rounded-xl font-medium text-white overflow-hidden group transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] disabled:opacity-50 disabled:hover:scale-100 disabled:cursor-not-allowed"
+            > Comment
+                <div className="absolute inset-0 bg-white/20 translate-y-12 group-hover:translate-y-0 transition-transform duration-300" />
+                <div className="relative flex items-center justify-center gap-2">
+                    
+                </div>
+            </button>
         </form>
     );
 });

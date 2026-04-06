@@ -5,7 +5,6 @@ import { Share2, User, Mail, MessageSquare, Send } from "lucide-react";
 import Swal from "sweetalert2";
 import { SocialLinks } from "../components/SocialLinks";
 import { Commentar } from "../components/Commentar";
-import { CTAButton } from "../components/ComponentsMemo";
 
 function ContactPage() {
   const [formData, setFormData] = useState({
@@ -138,13 +137,14 @@ function ContactPage() {
                   required
                 />
               </div>
-              <CTAButton
+              <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full"
-                text={isSubmitting ? 'Sending...' : 'Send Message'}
-                icon={Send}
-              />
+                className="w-full bg-gradient-to-r from-blue-black text-sm to-blue-black-medium dark:to-blue-white-radio text-blue-medium py-4 rounded-xl font-paragraph transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#6366f1]/20 active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+              >
+                <Send className="w-4 h-4" />
+                {isSubmitting ? 'Sending...' : 'Send Message'}
+              </button>
             </form>
 
             <div className="mt-10 pt-6 border-t border-white/10 flex justify-center space-x-6">
